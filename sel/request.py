@@ -34,6 +34,7 @@ class Request(object):
                            requests.adapters.HTTPAdapter(max_retries=retry))
 
     def request(self, endpoint, *args, **kwargs):
+        endpoint = endpoint[1:] if endpoint.startswith('/') else endpoint
         url = os.path.join(self.base_url, endpoint)
         method = getattr(self.session, kwargs.pop('__method__'))
         kwargs['timeout'] = self.timeout
