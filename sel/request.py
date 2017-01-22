@@ -105,9 +105,10 @@ class Request(object):
         data = json.dumps(data)
         return self.request(endpoint, data, *args, **kwargs)
 
-    def put(self, endpoint='', *args, **kwargs):
+    def put(self, endpoint='', data=None, *args, **kwargs):
         kwargs['__method__'] = 'put'
-        return self.request(endpoint, *args, **kwargs)
+        data = json.dumps(data)
+        return self.request(endpoint, data, *args, **kwargs)
 
     def patch(self, endpoint='', *args, **kwargs):
         kwargs['__method__'] = 'patch'
