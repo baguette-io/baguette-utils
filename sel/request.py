@@ -43,6 +43,7 @@ class Request(object):
         LOGGER.info('Calling %s, %s, %s with timeout :%s and max retries %s',
                     url, str(args), str(kwargs), self.timeout, self.retries)
         try:
+            result = None
             result = method(url, *args, **kwargs)
             result.raise_for_status()
         except requests.exceptions.RetryError:
@@ -52,10 +53,11 @@ class Request(object):
             )
             return {'status': 429, 'result': {}}
         except:
+            status_code = getattr(result, 'status_code', 'unknown')
             LOGGER.exception('Call to %s, %s, %s failed. Status code : %s.',
-                             result.url, str(args), str(kwargs),
-                             result.status_code)
-            return {'status': result.status_code, 'result': {}}
+                             url, str(args), str(kwargs),
+                             status_code)
+            return {'status': status_code, 'result': {}}
 
         # Always jsonify
         try:
@@ -69,7 +71,7 @@ class Request(object):
                              result.url, str(args), str(kwargs), result.text)
             return {'status': 2, 'result': {}}
 
-    def idontwantpagination(self, endpoint, *args, **kwargs):
+    def all(self, endpoint, *args, **kwargs):
         """Retrieve all the data of a paginated endpoint, using GET.
         :returns: The endpoint unpaginated data
         :rtype: dict
