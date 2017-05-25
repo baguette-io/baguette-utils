@@ -17,7 +17,7 @@ setup(
         'Windows'
     ],
     install_requires=[
-        'requests==2.12.5',
+        'requests==2.14.2',
     ],
     extras_require={
         'testing': [
