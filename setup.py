@@ -8,8 +8,7 @@ setup(
     name='baguette-utils',
     version='0.1',
     url='baguette.io',
-    download_url='baguette.io',
-    author_email='dev@baguette.io',
+    author_email='pydavid@baguette.io',
     packages=find_packages(),
     platforms=[
         'Linux/UNIX',
