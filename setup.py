@@ -8,6 +8,7 @@ setup(
     name='baguette-utils',
     version='0.1',
     description='some utils',
+    keywords=['utils', 'request'],
     url='https://github.com/baguette-io/baguette-utils/',
     author_email='pydavid@baguette.io',
     packages=find_packages(),
