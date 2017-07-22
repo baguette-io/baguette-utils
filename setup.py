@@ -7,7 +7,8 @@ from setuptools import find_packages, setup
 setup(
     name='baguette-utils',
     version='0.1',
-    url='baguette.io',
+    description='some utils',
+    url='https://github.com/baguette-io/baguette-utils/',
     author_email='pydavid@baguette.io',
     packages=find_packages(),
     platforms=[
