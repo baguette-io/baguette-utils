@@ -10,6 +10,7 @@ setup(
     description='some utils',
     keywords=['utils', 'request'],
     url='https://github.com/baguette-io/baguette-utils/',
+    author='pydavid',
     author_email='pydavid@baguette.io',
     packages=find_packages(),
     platforms=[
