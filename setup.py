@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='baguette-utils',
-    version='0.1',
+    version='0.11',
     description='some utils',
     keywords=['utils', 'request'],
     url='https://github.com/baguette-io/baguette-utils/',
