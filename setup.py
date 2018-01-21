@@ -6,8 +6,8 @@ from setuptools import find_packages, setup
 
 setup(
     name='baguette-utils',
-    version='0.12',
-    description='some utils',
+    version='0.13',
+    description='some dummy wrappers',
     keywords=['utils', 'request'],
     url='https://github.com/baguette-io/baguette-utils/',
     author='pydavid',
@@ -17,6 +17,14 @@ setup(
         'Linux/UNIX',
         'MacOS',
         'Windows'
+    ],
+    classifiers=[
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
+        'License :: OSI Approved',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Operating System :: OS Independent',
     ],
     install_requires=[
         'requests==2.14.2',
