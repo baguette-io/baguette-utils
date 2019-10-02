@@ -27,7 +27,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     install_requires=[
-        'requests==2.14.2',
+        'requests==2.20.0',
     ],
     extras_require={
         'testing': [
